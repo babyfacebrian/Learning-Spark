@@ -36,5 +36,4 @@ public class BusinessData {
                 .drop(purchaseData.col("customer_id"))
                 .drop(purchaseData.col("product_id"));
     }
-
 }
