@@ -6,7 +6,7 @@ import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.SparkSession;s
+import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.streaming.StreamingQuery;
 import org.apache.spark.sql.streaming.StreamingQueryException;
 
@@ -30,7 +30,7 @@ public class StreamingSocketApplication {
         Dataset<Row> streamWordCounts = words.groupBy("value").count();
 
         /*
-        outputMode = update: only new words
+        outputMode = update: only new words per batch (10 sec)
 
         outputMode = complete: full data / word counts
         */
